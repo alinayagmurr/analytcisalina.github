@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google Analytics Örneği</title>
+
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-FW82J5DSYL"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-FW82J5DSYL');
+</script>
+</head>
+<body>
+    <h1>Merhaba Dünya</h1>
+    <p>Bu sayfa Google Analytics ile izlenmektedir.</p>
+
+    <button onclick="trackButtonClick()">
+        Tıkla
+    </button>
+
+    <script>
+        function trackButtonClick() {
+            gtag('event', 'button_click', {
+                button_name: 'Ana Buton'
+            });
+
+            alert('Butona tıklandı!');
+        }
+    </script>
+</body>
+</html>
